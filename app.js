@@ -1,5 +1,5 @@
 const saveBtn = document.getElementById("input-btn");
 
-function saveLead() {
-    console.log("button clicked!");
-}
+saveBtn.addEventListener("click",function() {
+    console.log("button clicked");
+})
