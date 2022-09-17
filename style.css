@@ -34,3 +34,9 @@ ul {
 a {
     color:#5f9341;
 }
+
+@media(min-width:400px) {
+    body {
+        width: 30%;
+    }
+}
