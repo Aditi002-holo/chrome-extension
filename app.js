@@ -25,13 +25,6 @@ function renderLeads() {
 }
 
 
-
-
-// www.awesomelead.com
-// www.epiclead.com
-// www.greatlead.com
-
-
 // alternative
 // const li = document.createElement("li");
 // li.textContent = myLeads[i];
