@@ -14,9 +14,8 @@ input {
 }
 
 button {
-    width: 35%;
-    padding: 15px;
-    border: none;
+    width: 32%;
+    padding: 10px;
     background: #5f9341;
     color:#fff;
     font-family: inherit;
@@ -29,6 +28,7 @@ button {
 #delete-btn {
     color: #5f9341;
     background: #fff;
+    margin-top: 5px;
 }
 
 ul {
