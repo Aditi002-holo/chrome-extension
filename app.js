@@ -10,35 +10,37 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if(leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
-    renderLeads();
+    renderLeads(myLeads);
+}
+
+function renderLeads(leads) {
+    let listItems = "";
+    for(let i = 0; i < leads.length; i++) {
+        listItems += `
+        <li>
+            <a target='_blank' href='${leads[i]}'> 
+                ${leads[i]}
+            </a>
+        </li>`
+    }
+    ulEle.innerHTML = listItems;
 }
 
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear();
     myLeads = [];
     // ulEle.innerHTML = ''; --> trigger renderLeads() instead.
-    renderLeads();
+    renderLeads(myLeads);
 })
 
 inputBtn.addEventListener("click",function() {
     myLeads.push(inputEle.value);
     inputEle.value = '';
     localStorage.setItem("myLeads",JSON.stringify(myLeads))
-    renderLeads();
+    renderLeads(myLeads);
 })
 
-function renderLeads() {
-    let listItems = "";
-    for(let i = 0; i < myLeads.length; i++) {
-        listItems += `
-        <li>
-            <a target='_blank' href='${myLeads[i]}'>
-                ${myLeads[i]}
-            </a>
-        </li>`
-    }
-    ulEle.innerHTML = listItems;
-}
+
 
 
 // alternative
