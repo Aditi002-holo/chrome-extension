@@ -23,6 +23,12 @@ button {
     font-weight: 600;
     font-size: 1em;
     cursor: pointer;
+    border: 2px solid #5f9341;
+}
+
+#delete-btn {
+    color: #5f9341;
+    background: #fff;
 }
 
 ul {
